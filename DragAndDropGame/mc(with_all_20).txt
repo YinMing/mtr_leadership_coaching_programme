@@ -1,0 +1,103 @@
+data=[
+    {   
+        "question"    : "Drag and drop the above sentences to following 2 layers.",
+        "imageUrl"    : "",
+        "type"        : "dragdrop",
+        "weight"      : 20,
+        "description" : "",
+        "matchcontent": [
+                            {
+                                "content" : "Dos",
+                                "imageURL": "",
+                                "answer"  : "0,1,5,6,10,11,12,15,16,19"
+                            },
+                            {
+                                "content" : "Donts",
+                                "imageURL": "",
+                                "answer"  : "2,3,4,7,8,9,13,14,17,18"
+                            },
+                        ],
+        "choices"  : [
+                        {
+                            "content"   : "Remind the coachee on purpose – look out for common purpose that both you and the coachee care",
+                            "imageUrl"  : ""
+                        },
+                        {
+                            "content"   : "Active listening, clarifying to probe deeper; \"can you tell me more?\"",
+                            "imageUrl"  : ""
+                        },
+                        {
+                            "content"   : "Came across as one-way, or authoritative, educating (\"from above\")",
+                            "imageUrl"  : ""
+                        },
+                        {
+                            "content"   : "Praises only happening at the beginning of the conversation, or literally no praise at all",
+                            "imageUrl"  : ""
+                        },
+                        {
+                            "content"   : "Question one after another, came across as interrogating",
+                            "imageUrl"  : ""
+                        },
+                        {
+                            "content"   : "Ask implication questions; \"how will this affect you if this situation persists?\"",
+                            "imageUrl"  : ""
+                        },
+                        {
+                            "content"   : "Respond with empathy and understanding (connecting hearts and minds)",
+                            "imageUrl"  : ""
+                        },
+                        {
+                            "content"   : "Not enough probing to understand underlying feelings and rationale of the coachee",
+                            "imageUrl"  : ""
+                        },
+                        {
+                            "content"   : "Beating around the bush, trying to hint or imply certain messages without going straight to the point",
+                            "imageUrl"  : ""
+                        },
+                        {
+                            "content"   : "Subjective comments, not substantiated with facts",
+                            "imageUrl"  : ""
+                        },
+                        {
+                            "content"   : "Take notes to show respect to what the coachee has to say",
+                            "imageUrl"  : ""
+                        },
+                        {
+                            "content"   : "Seek for ideas from the coachee; invite coachee to conclude",
+                            "imageUrl"  : ""
+                        },
+                        {
+                            "content"   : "Withhold judgment whilst listening",
+                            "imageUrl"  : ""
+                        },
+                        {
+                            "content"   : "Seeing things overly from manager’s stance and not from the coachee’s perspective",
+                            "imageUrl"  : ""
+                        },
+                        {
+                            "content"   : "Insulting or overly pressurizing",
+                            "imageUrl"  : ""
+                        },
+                        {
+                            "content"   : "Go straight to your message – why you are concerned",
+                            "imageUrl"  : ""
+                        },
+                        {
+                            "content"   : "Speak with observable facts to reduce subjectivity",
+                            "imageUrl"  : ""
+                        },
+                        {
+                            "content"   : "Offering suggestions or solutions too soon",
+                            "imageUrl"  : ""
+                        },
+                        {
+                            "content"   : "Without any follow-up after the one-off coaching",
+                            "imageUrl"  : ""
+                        },
+                        {
+                            "content"   : "Maintain a genuinely caring, encouraging and candid mode throughout the conversation (the coachee can tell whether you genuinely care for him/her or not)",
+                            "imageUrl"  : ""
+                        },
+                    ]
+    }
+]

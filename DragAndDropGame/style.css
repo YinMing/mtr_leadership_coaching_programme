@@ -1,0 +1,78 @@
+body{
+ padding-top:20px;   
+}
+
+.card{
+    min-width:230px;
+}
+
+.question_content{
+    font-size:30px;
+}
+
+.question_img{
+    object-fit:scale-down;
+    background-color:#efefef;
+}
+
+.mc_label{
+    margin:0 2px 0 2px;
+    font-size:18px;
+    font-weight:bold;
+}
+
+.mc_content{
+    /*font-size:12px;*/
+    font-size: 8px;
+    text-align: left;
+}
+
+button{
+ margin :2px 0 5px 0;   
+}
+
+#comments{
+    font-size:20px;
+    display: none;
+}
+
+.choices_with_image{
+ display:inline-block;
+ padding:0 2px 0 2px;
+ max-width:300px;   
+ min-width:219px;
+}
+
+.nonMC_label{
+ margin: 2px 5px 2px 5px;
+}
+
+input[type=text]{
+    margin:2px;
+}
+
+.drop_pool,
+.drag_choice_pool{
+    min-height: 25px;
+    background-color:#efefef;
+    padding:10px 20px 10px 20px;
+    margin:5px;
+}
+
+.drag_choices{
+    padding:2px 10px 2px 10px;
+    margin:5px 10px 5px 10px;
+    background-color: lightgray;
+    /*text-align: center;*/
+}
+
+.progress{
+    margin:0 0 0 0;
+    height:25px;
+    display: none;
+}
+
+.progress-bar{
+    background-color:#6c757d;
+    display: none;
+}

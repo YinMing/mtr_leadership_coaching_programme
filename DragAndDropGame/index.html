@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<title>Coaching Tips – Do’s & Don’ts Exercise</title>
+    <link type="text/css" rel="stylesheet" href="bootstrap.min.css">
+    <link type="text/css" rel="stylesheet" href="style.css">
+	<link type="text/css" rel="stylesheet" href="style1.css">
+	<script type="text/javascript" src="jquery-3.2.1.min.js"></script>
+	<script type="text/javascript" src="script.js"></script>
+    <script type="text/javascript" src="mc.js"></script>
+</head>
+
+<script>
+    
+var n;
+function updateProgressBar(q){
+    n=getNumOfQuestion();
+    $(".progress-bar").width(((q+1)/n)*100+"%");
+    $(".progress-bar").attr("aria-valuenow", q+1);
+    $(".progress-bar").html((q+1)+"/"+n);
+}
+
+function nextPage(){
+    var q=getCurrentQuestion()+1;
+    if(q>=0&& q<n){
+        displayQuestion(q);
+        updateProgressBar(q);
+        if(q==n-1){
+            $("#nextbtn").css({"display":"none"});
+            $("#submitbtn").css({"display":""});
+        }
+        else{
+            $("#nextbtn").css({"display":""});
+            $("#submitbtn").css({"display":"none"}); 
+        }
+    }
+    else 
+    return;
+}
+
+function previousPage(){
+    var q=getCurrentQuestion()-1;
+    if(q>=0&& q<n){
+        displayQuestion(q);
+        updateProgressBar(q);
+        if(q==n-1){
+            $("#nextbtn").css({"display":"none"});
+            $("#submitbtn").css({"display":""});
+        }
+        else{
+            $("#nextbtn").css({"display":""});
+            $("#submitbtn").css({"display":"none"}); 
+        }
+    }
+    else 
+    return;
+}
+
+function submitResult(){
+    getResult();
+    $('#comments').html("Score:"+getScore()+"/"+getfullmark());
+    displayAllQuestion();
+    $("#submitbtn").css({"display":"none"});
+    $("#redobtn").css({"display":""});
+	$('#comments').show();
+    // $('#feedbackbtn').css({"display":""});
+}
+
+function getFeedback(){
+    // var score=getScore();
+    // if(score>=(getfullmark()/2)){
+    //     $("#initial_page").css({'display':'none'});
+    //     $("#low_score_page").css({'display':"none"});
+    //     $("#high_score_page").css({'display':""});
+    // }
+    // else{
+    //     $("#initial_page").css({'display':'none'});
+    //     $("#low_score_page").css({'display':""});
+    //     $("#high_score_page").css({'display':"none"});
+    // }
+}
+
+$(document).ready(function(){
+    readFile("questions");
+    displayQuestion(0);
+    n=getNumOfQuestion();
+    progress="<div class='progress-bar' style='width:"+(1/n*100)+"%' role='progressbar' aria-valuenow='1' aria-valuemax='"+n+"' >1/"+n+"<div>"
+    $(".progress").html(progress);
+    updateHeight(); 
+    if(n==1){
+        $("#backbtn").css({"display":"none"});
+        $("#nextbtn").css({"display":"none"});
+        $("#submitbtn").css({"display":""});
+    }
+});
+</script>
+
+
+<body>
+	<div class="container-fluid" id="initial_page">
+		<button class="btn btn-danger" id="btn-close" type="button" onclick="window.close();">Close - &#10006;</button>
+		<h2 class="text-center bg-light text-primary mb-2">
+			Coaching Tips – Do’s & Don’ts Exercise 
+		</h2>
+		<h3 id="comments" class="text-right text-danger"></h3>
+		<div id="questions">
+        </div>
+        <div id='footer'>
+            <div class='progress'>
+            </div>
+            <div class="buttons">
+                <button class='btn btn-secondary float-left' id="backbtn" onclick="previousPage()"><<</button>
+                <button class='btn btn-secondary float-right' id="nextbtn" onclick="nextPage()">>></button>
+                <button class='btn btn-secondary float-right' id="submitbtn" style="display:none" onclick="submitResult()">Submit</button>
+                <button class="btn btn-secondary float-right" id="feedbackbtn" style="display:none" onclick="getFeedback()">next</button>
+                <button class="btn btn-secondary float-right" id="redobtn" style="display:none" onclick="location.reload();">Re-do</button>
+            </div>
+            <div class="float-left" style="clear:left">
+                
+            </div>
+        </div>
+    </div>
+    <!-- <div class="container" id="low_score_page" style="display:none">
+        <h6>Low score</h6>
+    </div>
+    <div class="container" id="high_score_page" style="display:none">
+        <h6>High score</h6>
+    </div> -->
+</body>
+<script>
+function updateHeight() {
+	var minheight=$(window).height()-$(".progress").outerHeight()-$('.btn').outerHeight()-50
+    $('#questions').css('min-height',minheight);
+    $('.Question').css('min-height',minheight);
+}
+
+$( window ).resize(function() {
+	updateHeight();
+});
+</script>
+
+</html>
+

@@ -1,0 +1,114 @@
+body{
+    padding-top:20px;   
+   }
+   
+.card{
+    min-width:230px;
+}
+   
+.question_content{
+    font-size:30px;
+}
+.choice_img,
+.question_img{
+    object-fit:contain;
+    background-color:white;
+   }
+
+.question_img{
+    border-bottom:#a9894c 1px dashed;
+}
+   
+.mc_label{
+    margin:0 2px 0 2px;
+    font-size:20px;
+    font-weight:bold;
+}
+   
+.mc_content,.question_description{
+    word-wrap: normal;
+    font-size:16px;
+    text-align: left;
+}
+   
+button{
+    margin :2px 0 5px 0;   
+}
+   
+#comments{
+    font-size:20px;
+}
+   
+.choices_with_image{
+    display:inline-block;
+    padding:0 2px 0 2px;
+    max-width:300px;   
+    min-width:219px;
+}
+   
+.nonMC_label{
+    font-size:20px;
+    margin: 2px 5px 2px 5px;
+}
+   
+input[type=text]{
+    margin:2px;
+}
+   
+.drop_pool,
+.drag_choice_pool{
+    min-height: 50px;
+    border:#a9894c 1px dashed;
+    background-color: white;
+    padding:10px 20px 10px 20px;
+    margin:5px;
+}
+   
+.drag_choices{
+    padding:2px;
+    margin:5px 10px 5px 10px;
+    text-align: center;
+}
+   
+.btn-secondary{
+    background-color: #a9894c;
+    border-color:#a9894c;
+}
+
+.btn-secondary:hover{
+    background-color: #9b7b3d;
+    border-color:#9b7b3d;
+}
+
+.btn-secondary:not(:disabled):not(.disabled).active, .btn-secondary:not(:disabled):not(.disabled):active, .show>.btn-secondary.dropdown-toggle{
+    background-color: #8f743f;
+    border-color:#8f743f;
+}
+
+.progress{
+    margin:0 0 0 0;
+    height:25px;
+}
+
+.progress-bar{
+    background-color:#a9894c
+}
+
+.question_content{
+    color:#9b7b3d;
+}
+
+.card{
+    border-color:#9b7b3d;
+}
+
+input[type=radio], input[type=checkbox]{
+    height:17px;
+    width:17px;
+    margin:5px;
+}
+
+select{
+    height:25px;
+    font-size: 18px;
+}
